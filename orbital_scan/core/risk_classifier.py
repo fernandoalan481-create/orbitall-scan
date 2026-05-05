@@ -53,10 +53,13 @@ def compute_risk_score(vulnerabilities: List[Vulnerability]) -> int:
 
 def classify_risk_label(score: int) -> str:
 
-    if score >= 75:
+     if score >= 75:
         return "BAIXO"
-    if score >= 50:
+    elif score >= 50:
         return "MÉDIO"
-    if score >= 25:
+    elif score >= 30:
+        return "MÉDIO"
+    elif score >= 25:
         return "ALTO"
-    return "CRÍTICO"
+    else:
+        return "CRÍTICO"
