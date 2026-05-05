@@ -29,6 +29,21 @@ O Orbital Scan analisa uma URL e procura problemas comuns de segurança, como:
 
 ---
 
+# Scan básico
+python main.py https://example.com
+
+# Timeout personalizado
+python main.py https://example.com -t 20
+
+# Scan autenticado (enviando cookie de sessão)
+python main.py https://app.example.com -H "Cookie: session=abc123"
+
+# Múltiplos headers personalizados
+python main.py https://example.com -H "Authorization: Bearer token" -H "X-Custom: value"
+
+# Ocultar o banner (útil para redirecionar saída)
+python main.py https://example.com --no-banner
+
 ## Estrutura do projeto
 
 ```text
